@@ -29,7 +29,7 @@ fclose($file);
         <table>
             <thead>
                 <tr>
-                    <th>todo</th>
+                    <th>Name</th>
                 </tr>
             </thead>
             <tbody>

@@ -11,17 +11,35 @@
 <body>
     <form action="create.php" method="POST">
         <fieldset>
-            <legend>textファイル書き込み型todoリスト（入力画面）</legend>
-            <a href="read.php">一覧画面</a>
+            <legend>アンケート</legend>
+
             <div>
-                todo: <input type="text" name="todo">
+                Name: <input type="text" name="Name" value="カナ">
             </div>
             <div>
-                deadline: <input type="date" name="deadline">
+                E-mail: <input type="text" name="mail">
+            </div>
+            <div>
+                <P>(1)睡眠時間</P>
+                ９時間以上 <input type="checkbox" name="nine">
+                ７〜９時間 <input type="checkbox" name="seven">
+                ５〜７時間 <input type="checkbox" name="five">
+                ３〜５時間 <input type="checkbox" name="three">
+                ３時間以下 <input type="checkbox" name="ika">
+            </div>
+            <div>
+                <p>(2)朝食</p>
+                ごはんを食べる <input type="checkbox" name="gohan">
+                パンを食べる <input type="checkbox" name="pan">
+                果物を食べる <input type="checkbox" name="kudamono">
+                何も食べない <input type="checkbox" name="none">
+                その他 <input type="checkbox" name="sonota">
             </div>
             <div>
                 <button>submit</button>
             </div>
+
+            <a href="read.php">結果一覧</a>
         </fieldset>
     </form>
 </body>
