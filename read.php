@@ -65,6 +65,8 @@ fclose($file);
 
     .main_zenbu {
         border: none;
+        display: inline-block;
+        text-align: left;
     }
 
     .uratitle {
