@@ -4,19 +4,14 @@
 // exit();
 
 $Name = $_POST["Name"];
-$mail = $_POST["mail"];
-$nine = $_POST["nine"];
-$seven = $_POST["seven"];
-$five = $_POST["five"];
-$three = $_POST["three"];
-$ika = $_POST["ika"];
+$gender = $_POST["gender"];
+$suimin = $_POST["suimin"];
 $gohan = $_POST["gohan"];
-$pan = $_POST["pan"];
-$kudamono = $_POST["kudamono"];
-$none = $_POST["none"];
-$sonota = $_POST["sonota"];
-$write_data = "{$Name}{$mail}{$nine}{$seven}{$five}{$three}{$ika}{$gohan}{$pan}{$kudamono}{$none}{$sonota}{}\n";
-$file = fopen('data/todo.txt', 'a');
+$sapuri = $_POST["sapuri"];
+$tabako = $_POST["tabako"];
+$osake = $_POST["osake"];
+$write_data = "{$Name},{$gender},{$suimin},{$gohan},{$sapuri},{$tabako},{$osake}\n";
+$file = fopen('data/data.csv', 'a');
 flock($file, LOCK_EX);
 fwrite($file, $write_data);
 flock($file, LOCK_UN);
