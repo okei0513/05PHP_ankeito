@@ -23,15 +23,14 @@ fclose($file);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>一覧画面</title>
-    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-    <fieldset>
-        <legend class="uratitle">一覧画面</legend>
+<body class="main">
+    <fieldset class="main_zenbu">
+        <legend class="uratitle">結果一覧</legend>
         <table>
             <thead>
-                <tr>
+                <tr class="koumoku">
                     <th>名前</th>
                     <th>性別</th>
                     <th>睡眠</th>
@@ -52,6 +51,22 @@ fclose($file);
         </script>
 </body>
 <style>
+    .main {
+        text-align: center;
+        background-color: #FFFFCC;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-style: double;
+        border-width: 20px;
+        border-color: #a6ddb0;
+    }
+
+    .main_zenbu {
+        border: none;
+    }
+
     .uratitle {
         position: relative;
         color: #158b2b;
@@ -63,16 +78,20 @@ fclose($file);
     .uratitle:before {
         content: "";
         position: absolute;
-        top: -8px;
+        top: -5px;
         left: 50%;
-        width: 150px;
-        height: 58px;
+        width: 180px;
+        height: 60px;
         border-radius: 50%;
         border: 5px solid #a6ddb0;
         border-left-color: transparent;
         border-right-color: transparent;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
+    }
+
+    .koumoku {
+        color: 000080;
     }
 </style>
 

@@ -11,10 +11,10 @@
 
 <body class="main">
     <form action="create.php" method="POST">
-        <fieldset>
+        <fieldset class="main_zentai">
             <h1 class="title">アンケート</h1>
 
-            <div>
+            <div class="topbox">
                 <p>お名前<input type="text" name="Name" required></p>
                 <p>性別<input type="radio" name="gender" value="男性">男
                     <input type="radio" name="gender" value="女性">女
@@ -28,7 +28,7 @@
                 ３〜５時間 <input type="checkbox" name="suimin" value="３〜５時間">
                 ３時間以下 <input type="checkbox" name="suimin" value="３時間以下">
             </div>
-            <div>
+            <div class="gohanbox">
                 <p>(2)朝食</p>
                 ごはんを食べる <input type="checkbox" name="gohan" value="ごはん">
                 パンを食べる <input type="checkbox" name="gohan" value="パン">
@@ -36,20 +36,20 @@
                 何も食べない <input type="checkbox" name="gohan" value="食べない">
                 その他 <input type="checkbox" name="gohan" value="その他">
             </div>
-            <div>
+            <div class="sapiribox">
                 <p>(3)サプリメント</p>
                 飲まない<input type="checkbox" name="sapuri" value="飲まない">
                 １種類飲む<input type="checkbox" name="sapuri" value="１種類">
                 ２種類以上飲む<input type="checkbox" name="sapuri" value="２種類以上">
                 たまに飲む<input type="checkbox" name="sapuri" value="２種類以上">
             </div>
-            <div>
+            <div class="tabako">
                 <p>(4)タバコ</p>
                 吸わない <input type="checkbox" name="tabako" value="吸わない">
                 毎日吸う <input type="checkbox" name="tabako" value="毎日吸う">
                 たまに吸う <input type="checkbox" name="tabako" value="たまに吸う">
             </div>
-            <div>
+            <div class="osake">
                 <p>(5)お酒</p>
                 飲まない <input type="checkbox" name="osake" value="飲まない">
                 毎日飲む <input type="checkbox" name="osake" value="毎日飲む">
@@ -58,17 +58,19 @@
                 週１〜２日飲む <input type="checkbox" name="osake" value="週１〜２日">
             </div>
 
-            <div>
-                <button class="btn">送信</button>
+            <div class="sousin">
+                <button>送信</button>
             </div>
-
-            <a href="read.php">結果一覧</a>
+            <div class="kekka">
+                <a href="read.php">集計結果一覧</a>
+            </div>
         </fieldset>
     </form>
 </body>
 
 <style>
     .main {
+        text-align: center;
         background-color: #FFFFCC;
         margin-top: 10%;
         margin-bottom: 10%;
@@ -79,10 +81,16 @@
         border-color: #a6ddb0;
     }
 
+    .main_zentai {
+        display: inline-block;
+        text-align: left;
+        border: none;
+    }
+
     .title {
         position: relative;
         color: #158b2b;
-        font-size: 35px;
+        font-size: 40px;
         text-align: center;
         margin: 1.5em 0;
     }
@@ -102,10 +110,35 @@
         transform: translateX(-50%);
     }
 
-    .btn {
+    .topbox {
+        padding-bottom: 10px;
+    }
+
+    .gohanbox {
+        padding-top: 20px;
+    }
+
+    .sapiribox {
+        padding-top: 20px;
+    }
+
+    .tabako {
+        padding-top: 20px;
+    }
+
+    .osake {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .sousin {
         color: black;
         background-color: FFFACD;
         border-color: 66CC66;
+    }
+
+    .kekka {
+        padding-top: 20px;
     }
 </style>
 
